@@ -36,7 +36,7 @@
   }
 
   .navigation-menu li a:hover{
-    transform: scale(1.1);
+    color: aquamarine;
   }
   .hamburger {
     border: 0;
@@ -128,6 +128,7 @@
   @media screen and (max-width: 768px) {
     .navigation-menu.expanded ul {
       display: block;
+      height: max-content;
     }
   }
 

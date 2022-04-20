@@ -1,8 +1,8 @@
 .client{
-    width: 300px;
+    max-width: 300px;
     height: 350px;
     background-color: #23a195;
-    margin-right: 20px;
+    margin: 0 5px;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -15,7 +15,15 @@
 .client img{
     max-width: 150px;
     border-radius: 50%;
+    margin: 15px auto;
 }
 .client p{
     padding: 0 10px 10px 10px;
+    text-align: center;
+}
+
+@media(max-width:480px){
+    .client{
+        max-width: 100%;
+    }
 }

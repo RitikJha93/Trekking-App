@@ -1,0 +1,41 @@
+.merch-cont{
+    background-color: gainsboro;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+.merch-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.merch-text{
+    /* line-height: 1.3rem; */
+    max-width: 50%;
+}
+
+.merch-text h2{
+    margin-bottom: 10px;
+}
+.merch-content img{
+    max-width: 300px;
+}
+
+.merch{
+    display: block;
+    margin:15px auto;
+}
+
+@media(max-width:700px){
+    .merch-content{
+        flex-direction: column;
+    }
+    .merch-text{
+        max-width: 100%;
+        text-align: center;
+    }
+    .merch-content img{
+        max-width: 200px;
+    }
+}

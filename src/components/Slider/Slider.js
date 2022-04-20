@@ -16,8 +16,8 @@ const Slider = () => {
   }
   return (
     <div className='slider-cont'>
-      <div className="arrow-cont" style={{left:0}} onClick={(()=>handleClick("l"))}>
-        <ArrowBackIosIcon style={{fontSize:50}}/>
+      <div className="arrow-cont" style={{left:'10px'}} onClick={(()=>handleClick("l"))}>
+        <i class="fa-solid fa-angle-left"></i>
       </div>
       <div className="wrapper" style={{transform:`translateX(${-100*index}vw)`}}>
             {sliderItems.map((items)=>{
@@ -33,8 +33,8 @@ const Slider = () => {
             })}
   
       </div>
-      <div className="arrow-cont" style={{right:0}} onClick={(()=>handleClick("r"))}>
-        <ArrowForwardIosIcon style={{fontSize:50}}/>
+      <div className="arrow-cont" style={{right:'10px'}} onClick={(()=>handleClick("r"))}>
+        <i class="fa-solid fa-angle-right"></i>
       </div>
       
     </div>

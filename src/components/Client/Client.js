@@ -1,17 +1,62 @@
-import React from 'react'
-import './Client.css'
+import React, { Component } from "react";
+import Slider from "react-slick";
 import { clientData } from '../../data'
-const Client = () => {
-  return (
-    clientData.map((items)=>{
-        return(
-            <div className='client'>
-                <img src={items.img} alt="" />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum odit deleniti velit nobis reiciendis modi esse asperiores praesentium excepturi, eligendi ea quisquam voluptatem delectus a ducimus similique debitis est voluptas nam? Cumque laboriosam quo dolores.</p>
-            </div>
-        )
-    })
-  )
-}
+import './Client.css'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
-export default Client
+export default class Client extends Component {
+  render() {
+    var settings = {
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
+    return (
+      <div>
+        <Slider {...settings}>
+          {clientData.map((items)=>{
+            return(
+              <div>
+                <div className="client">
+                  <img src={items.img} alt="" />
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus magnam beatae ad aperiam, corporis ullam quae dignissimos quasi nostrum itaque quibusdam laboriosam? Enim repudiandae in recusandae perferendis, quia vel.</p>
+                </div>
+              </div>
+
+            )
+          })}
+        </Slider>
+      </div>
+    );
+  }
+}

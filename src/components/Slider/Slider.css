@@ -11,14 +11,19 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    height: 12%;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
     margin: auto;
     cursor: pointer;
     z-index: 2;
     color: white;
-}
-.arrow-cont:hover{
     background-color: rgb(15,37,61);
+}
+
+
+.arrow-cont i{
+    font-size: 30px
 }
 .img-cont1 img{
     width: 100vw;

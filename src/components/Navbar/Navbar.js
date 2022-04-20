@@ -1,10 +1,7 @@
 import "./Navbar.css"
 import { useState } from "react";
-import SearchIcon from '@mui/icons-material/Search';
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
-import Badge from '@mui/material/Badge';
 import logo from '../../images/logo.png'
-
+import {Link} from 'react-router-dom'
 export default function Navbar() {
 
   const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -36,39 +33,36 @@ export default function Navbar() {
           />
         </svg>
       </button>
-      {/* <div className="search">
-            <div className={isDisplay ? "searchicon" : "searchicon1"}>
-                <SearchIcon onClick={handleClick}/>
-            </div>
-            <div className={isDisplay ? "searchbox1" : "searchbox"}>
-                <input type="text" placeholder='Search....' />
-            </div>
-      </div> */}
+
       <div
         className={
           isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
         }>
         <ul>
           <li>
-            <a href="/home">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link to="/adventures">Adventures</Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link to="/fitprep">Fitprep</Link>
           </li>
           <li>
-            <a href="/signup">Register</a>
+            <Link to="/courses">Courses</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link to="/mission">Mission</Link>
+          </li>
+          <li>
+            <Link to="/team">Team</Link>
           </li>
         </ul>
       </div>
 
-      {/* <div className="cart" style={{marginRight:'1rem'}}>  
-            <Badge badgeContent={4} color="primary">
-                <ShoppingBagOutlinedIcon color='action' style={{fontSize: "30px",color: "black",cursor:'pointer'}}/>
-            </Badge>
-          </div> */}
     </nav>
   );
 }
