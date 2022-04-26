@@ -13,6 +13,7 @@ const Team = () => {
                     <div className="team-card">
                         <img src={items.img} alt="" />
                         <h3>{items.name}</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam vitae sunt debitis! Neque, saepe quas!</p>
                     </div>
                 )
             })}
@@ -28,6 +29,8 @@ const Team = () => {
                 <div className="team-card">
                     <img src={items.img} alt="" />
                     <h3>{items.name}</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam vitae sunt debitis! Neque, saepe quas!</p>
+
                 </div>
             )
         })}
