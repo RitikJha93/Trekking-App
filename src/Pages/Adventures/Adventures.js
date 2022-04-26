@@ -12,15 +12,13 @@ const Adventures = () => {
 
     
   return (
-    <div >
-      <Navbar/>
+    <div className='adv'>
       <MarchTreks/>
       <SummerTreks/>
       <MonsoonTreks/>
       <WeekendTreks/>
       <RareTreks/>
       <InternationalTreks/>
-      <Footer/>
     </div>
   )
 }

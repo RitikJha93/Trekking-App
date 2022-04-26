@@ -8,8 +8,7 @@ const Footer = () => {
             <h1>Unoia</h1>
             <div className="info-box">
                 <p>Call Us : +123-456-789</p>
-                <p>redstore@example.com</p>
-                <p>Monday till Friday 10 to 6 EST</p>
+                <p>unioa@example.com</p>
             </div>
         </div>
         <div className="social-icons">
@@ -28,32 +27,32 @@ const Footer = () => {
             <h3>ABOUT US</h3>
             <p>About Us</p>
             <p>Contact us</p>
-            <p>Factories</p>
-            <p>Careers</p>
+            <p>Gallery</p>
+            <p>News and Articles</p>
+            <p>Discounted Offers</p>
           </div>
           <div>
-            <h3>ORDERS AND RETURNS</h3>
-            <p>Help and advice</p>
-            <p>Shippintg & Returns</p>
-            <p>Terms and conditions</p>
-            <p>Refund policy</p>
+            <h3>ACTIVITIES</h3>
+            <p>Trekking and Hiking</p>
+            <p>Bungee Jump</p>
+            <p>Zip Lines</p>
+            <p>Canoeing</p>
+            <p>Kayaking</p>
           </div>
           <div>
-            <h3>MY ACCOUNT</h3>
-            <p>Login</p>
-            <p>Register</p>
-            <p>My Wishlist</p>
-            <p>Check Out</p>
+            <h3>TREKS</h3>
+            <p>Summer Treks</p>
+            <p>Winter Treks</p>
+            <p>Monsoon Treks</p>
+            <p>Weekend Treks</p>
+            <p>International Treks</p>
           </div>
 
       </div>
       <div className="box3">
           <div className="copy">
-            Copyright © 2021 hiking. All rights reserved.
+            Copyright © 2022 hiking. All rights reserved.
           </div>
-          {/* <div className="cards">
-            <img src="https://cdn.shopify.com/s/files/1/0256/4594/0810/files/paypal_c6cdc9cc-cff1-444c-b2c7-1a1ed8a245e2_240x25.png?v=1617616020" alt="" />
-          </div> */}
 
       </div>
     </div>

@@ -1,0 +1,23 @@
+.blog-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #EDEEEC;
+}
+
+.blog{
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+@media(max-width:425px){
+    .blog-cont h1{
+        font-size: 1.2rem;
+    }
+}

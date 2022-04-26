@@ -1,7 +1,7 @@
 import "./Navbar.css"
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import logo from '../../images/logo.png'
-import {Link} from 'react-router-dom'
+import {Link,useLocation} from 'react-router-dom'
 export default function Navbar() {
 
   const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -10,6 +10,11 @@ export default function Navbar() {
   const handleClick = ()=>{
     setIsDisplay(!isDisplay)
   }
+
+  let location = useLocation()
+  useEffect(()=>{
+    console.log(location)
+  },[location])
   return (
     <nav className="navigation">
       <div className="logo-cont">
@@ -40,25 +45,25 @@ export default function Navbar() {
         }>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className={location.pathname === '/' ? 'click' : 'unclick'} >Home</Link>
           </li>
           <li>
-            <Link to="/adventures">Adventures</Link>
+            <Link to="/adventures" className={location.pathname === '/adventures' ? 'click' : 'unclick'}>Adventures</Link>
           </li>
           <li>
-            <Link to="/fitprep">Fitprep</Link>
+            <Link to="/fitprep" className={location.pathname === '/fitprep' ? 'click' : 'unclick'}>Fitprep</Link>
           </li>
           <li>
-            <Link to="/courses">Courses</Link>
+            <Link to="/courses" className={location.pathname === '/courses' ? 'click' : 'unclick'}>Courses</Link>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <Link to="/blog" className={location.pathname === '/blog' ? 'click' : 'unclick'}>Blog</Link>
           </li>
           <li>
-            <Link to="/mission">Mission</Link>
+            <Link to="/mission" className={location.pathname === '/mission' ? 'click' : 'unclick'}>Mission</Link>
           </li>
           <li>
-            <Link to="/team">Team</Link>
+            <Link to="/team" className={location.pathname === '/team' ? 'click' : 'unclick'}>Team</Link>
           </li>
         </ul>
       </div>

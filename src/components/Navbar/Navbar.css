@@ -26,14 +26,6 @@
     list-style-type: none;
     margin: 0 1rem;
   }
-  .navigation-menu li a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    width: 100%;
-    font-size: 1.2rem;
-    transition: 0.2s;
-  }
 
   .navigation-menu li a:hover{
     color: aquamarine;
@@ -68,6 +60,22 @@
 }
 .logo{
   max-width: 40px;
+}
+.unclick{
+  color: white;
+  text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+.click{
+  text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    transition: 0.2s;
+  color: aquamarine;
 }
 .logo-cont{
   color: white;
@@ -115,9 +123,6 @@
       padding: 1.5rem 0;
       color: white;
     }
-    .navigation-menu li:hover {
-      background-color: #eee;
-    }
   }
   
   @media screen and (max-width: 768px) {
@@ -132,22 +137,3 @@
     }
   }
 
-  /* @media(max-width:600px){
-    .searchbox input{
-        display: none;
-    }
-    .search{
-        position: absolute;
-        right: 4rem;
-    }
-    .searchbox1{
-      position: absolute;
-      top: 48px;
-      right: -60px;
-    }
-    .searchicon1{
-      margin-top: 6px;
-      display: block;
-  } */
-    
-  /* } */

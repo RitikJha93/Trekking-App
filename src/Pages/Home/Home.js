@@ -10,14 +10,14 @@ import Merchandise from '../../components/Merchandise/Merchandise'
 const Home = () => {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Slider/>
       <Categories/>
       <Popular/>
       <Experience/>
       <Testimonials/>
       <Merchandise/>
-      <Footer/>
+      {/* <Footer/> */}
 
     </div>
   )

@@ -1,0 +1,43 @@
+.team-cont{
+    padding-left: 20px 0;
+    background-color: #EDEEEC;
+
+}
+.team-card img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-card{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.team-card h3{
+    margin-top: 10px;
+}
+/* .leadership-team , .instructor-team{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.leadership-team h2 , .instructor-team h2{
+    padding:15px ;
+    text-align: center;
+}
+.team{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}

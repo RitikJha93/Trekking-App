@@ -6,6 +6,8 @@ import Fitprep from './Pages/Fitprep/Fitprep'
 import Mission from './Pages/Mission/Mission'
 import Team from './Pages/Team/Team'
 import Blog from './Pages/Blog/Blog'
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import {
   BrowserRouter as Router,
   Route,
@@ -15,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <Navbar/>
         <Routes>
           <Route exact path='/' element={<Home/>} />
           <Route exact path='/adventures' element={<Adventures/>} />
@@ -24,6 +27,7 @@ function App() {
           <Route exact path='/mission' element={<Mission/>} />
           <Route exact path='/team' element={<Team/>} />
         </Routes>
+        <Footer/>
       </Router>
 
     </div>
