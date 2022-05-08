@@ -15,6 +15,10 @@ import clientimg3 from './images/pic-3.png';
 import clientimg4 from './images/pic-4.png';
 import clientimg5 from './images/pic-5.png';
 import clientimg6 from './images/pic-6.png';
+import goechalabackimg from './images/goechalabackimg.jpg'
+import khoprabackimg from './images/khoprabackimg.jpg'
+import sandakphubackimg from './images/sandakphubackimg.jpg'
+import benogbackimg from './images/benogbackimg.jpg'
 import aliBedniTrek from './images/ali-bedniTrek.jpg'
 import brahmatalTrek from './images/brahmatalTrek.jpg'
 import dayaraTrek from './images/dayaraTrek.jpg'
@@ -66,6 +70,13 @@ import instruc2img from './images/instruc2img.jpg'
 import instruc3img from './images/instruc3img.jpg'
 import instruc4img from './images/instruc4img.jpg'
 import instruc5img from './images/instruc5img.jpg'
+import benogimg from './images/benogimg.jpg'
+import sandakphuimg from './images/sandakphuimg.jpg'
+import khopraimg from './images/khopraimg.jpg'
+import goechalaimg from './images/goechalaimg.jpg'
+
+
+
 const lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur necessitatibus excepturi quod labore debitis reiciendis delectus placeat veniam ullam corporis."
 const sliderItems =[
     {
@@ -119,25 +130,42 @@ const popularItems = [
         img:popimg1,
         name:"Benog Tibba Trek",
         height:"7372 ft",
-        duration:"2 days"
+        duration:"2 days",
+        backimg:benogbackimg,
+        desc:"An Ideal Introductory Weekend Trek to the Himalayas",
+        info:"The Benog Tibba Trek is a short day hike in Mussoorie Wildlife Sanctuary, Benog. Established in 1993, the sanctuary is home to the near-extinct Mountain Quail. It is an excellent short hike for families and children who are looking to get away from the summer heat.The trek starts from the Indiahikes campsite near the forest office of the sanctuary. Right from the very first campsite,  you are in the wilderness. Trekking through lush green forests Once the trail moves out of the forest, the view of the Yamuna valley below opens up to the westpockets of villages and their farms dotting the hills. During spring, this section of trail has a flowers that almost obscures the grass!And to the east, the Greater Himalayan range — Kalanag, Swargarohini, Gangotri I, II, III, BhrigupanthKedarnath — and a plethora of other mountains open up in a sweeping panorama.The wildlife sanctuary is also home to a variety of flora and fauna. Himalayan Goats, Barking Deer, Langurs and Mountain Quails can be spotted by keen observers. So keep your eyes and ears open clues!No wonder this isolated route makes for a very satisfying weekend trek out of Delhi, Dehradun, Chandigarh any surrounding cities.",
+        tpimg:benogimg
     },
     {
         img:popimg2,
         name:"Sandakphu Phalut",
         height:"11950 ft",
-        duration:"7 days"
+        duration:"7 days",
+        backimg:sandakphubackimg,
+        desc:"See Four Of The Tallest Mountains In The World!",
+        info:"Sandakphu Phalut Trek is one of the few treks on earth from where you can see 8,000 meter peaks. Standing at an altitude of 11,950 feet on Sandakphu, on your left you can see the Everest cluster.There is Lhotse and Makalu, the fourth and the fifth highest peaks in the world, trying to outdo tallest peak. And then there is Everest , effortlessly towering over everything.",
+        tpimg:sandakphuimg
+
     },
     {
         img:popimg3,
         name:"Khopra Ridge Trek",
         height:"15709 ft",
-        duration:"9 days"
+        duration:"9 days",
+        backimg:khoprabackimg,
+        desc:"An Off-beat Nepal Trek That Takes You Close To 22 Big Mountains",
+        info:"For many decades now, the Annapurna Base Camp and Everest Base Camp treks have been bucketlist treks for most trekking. If you think about trekking in Nepal, these are the two treks that come to mind.But there’s another trek, very close to Annapurna Base Camp and much more rewarding, and that’s Ridge Trek. Why is it more rewarding?You see 22 big mountains from the Khopra RidgeOut of which 2 are amongst the 14 highest mountains in the world – Mt Dhaulagiri I (7th highest)!Annapurna I (10th highest). But that’s not the full picture. You see the Annapurna massif at distance (even closer than on the ABC trek). You see the Mt Machapuchare as glorious as ever. You Nilgiri North and South. There’s Mt Himchuli, Mt Ganga Purna, it’s endless!Let’s not forget Mt Dhaulagiri. It is right in front of you!",
+        tpimg:khopraimg
     },
     {
         img:popimg4,
         name:"Goechala Trek",
         height:"15100 ft",
-        duration:"10 days"
+        duration:"10 days",
+        backimg:goechalabackimg,
+        desc:"A Trek That Takes You Close To The World’s Third Highest Mountain",
+        info:"The biggest reason to do the Goechala trek is the grand views of big mountains that you see. You don’t just see one summit — the Kanchenjunga — but 14 other big summits. That’s a lot for any trek — especially as close to the eyes as on the Goechala trek. It is no wonder that trekkers consider Goechala to be the closest to the big mountain treks of Nepal.Before we dive into the details about Goechala trek, here is a little backdrop of why Goechala is wellamong trekkers all over the world: While the trail to Goechala is an old one, it wasn’t always so famous. The change came about Nepalese Civil War which lasted from 1996 to 2006.Disturbances in Nepal during this time shut the country to trekkers. Suddenly trekking to mountains of the world was out of bounds. It was a huge blow to the trekkers who frantically for alternatives.At that time, Goechala emerged as the closest solace. The trail promised a brilliant close-up to highest mountain of the world and offered breathtaking views of the Singalila range from the Dzongri top.",
+        tpimg:goechalaimg
     },
 ]
 

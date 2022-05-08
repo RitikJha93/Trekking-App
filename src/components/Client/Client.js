@@ -4,8 +4,13 @@ import { clientData } from '../../data'
 import './Client.css'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 export default class Client extends Component {
+
+  componentDidMount = ()=>{
+    Aos.init({duration: 1000});
+  }
   render() {
     var settings = {
       dots: true,
@@ -47,7 +52,7 @@ export default class Client extends Component {
           {clientData.map((items)=>{
             return(
               <div>
-                <div className="client">
+                <div className="client" data-aos='fade-up'>
                   <img src={items.img} alt="" />
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus magnam beatae ad aperiam, corporis ullam quae dignissimos quasi nostrum itaque quibusdam laboriosam? Enim repudiandae in recusandae perferendis, quia vel.</p>
                 </div>

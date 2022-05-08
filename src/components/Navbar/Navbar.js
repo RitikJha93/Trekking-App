@@ -1,6 +1,7 @@
 import "./Navbar.css"
 import { useState,useEffect } from "react";
 import logo from '../../images/logo.png'
+
 import {Link,useLocation} from 'react-router-dom'
 export default function Navbar() {
 
@@ -13,13 +14,12 @@ export default function Navbar() {
 
   let location = useLocation()
   useEffect(()=>{
-    console.log(location)
   },[location])
   return (
     <nav className="navigation">
       <div className="logo-cont">
         <img src={logo} className='logo' alt="" />
-        <h1>Unoia</h1>
+        <h1>TATA Adventures</h1>
       </div>
       <button className="hamburger" 
       onClick={() => {
@@ -64,6 +64,9 @@ export default function Navbar() {
           </li>
           <li>
             <Link to="/team" className={location.pathname === '/team' ? 'click' : 'unclick'}>Team</Link>
+          </li>
+          <li>
+            <Link to="/login" className={location.pathname === '/team' ? 'click' : 'unclick'}>Login</Link>
           </li>
         </ul>
       </div>

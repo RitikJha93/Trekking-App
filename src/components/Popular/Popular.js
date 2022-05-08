@@ -1,9 +1,20 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import './Popular.css'
 import { popularItems } from '../../data'
-const Popular = () => {
+import { Link } from 'react-router-dom'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+const Popular = ({set}) => {
+
+    const handleClick = (name,img,height,duration,desc,info,tpimg)=>{
+        set(name,img,height,duration,desc,info,tpimg)
+    }
+
+    useEffect(()=>{
+        Aos.init({duration: 2000});
+      })
   return (
-    <div className='popular'>
+    <div className='popular' data-aos='fade-up'>
       <div className="heading">
           <h1>Popular Packages</h1>
       </div>
@@ -28,7 +39,8 @@ const Popular = () => {
                                 <p>{items.duration}</p>
                             </div>
                         </div>
-                        <button className='date-btn'>View dates</button>
+                        <Link to='/info'><button className='date-btn' onClick={()=>handleClick(items.name,items.backimg,items.height,items.duration,items.desc,items.info,items.tpimg)}>View dates</button></Link>
+                        
                     </div>
                 </div>
               )

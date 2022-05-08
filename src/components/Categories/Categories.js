@@ -1,9 +1,15 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import {categoryItems} from '../../data'
 import './Categories.css'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 const Categories = () => {
+
+  useEffect(()=>{
+    Aos.init({duration: 2000});
+  })
   return (
-    <div className='category'>
+    <div className='category' data-aos='fade-up'>
       <div className="adventure-title">
         <h1>Adventure Idea!</h1>
       </div>

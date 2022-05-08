@@ -1,9 +1,15 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import './Merchandise.css'
 import merchimg from '../../images/merch-img.png'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 const Merchandise = () => {
+
+  useEffect(()=>{
+    Aos.init({duration: 1000});
+  })
   return (
-    <div className='merch-cont'>
+    <div className='merch-cont' data-aos='fade-up'>
       <div className="merch-content">
           <div className="merch-text">
             <h2>Visit our store to buy and rent Gears</h2>

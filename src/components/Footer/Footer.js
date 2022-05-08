@@ -1,8 +1,10 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import './Footer.css'
+
 const Footer = () => {
+
   return (
-    <div className='footer'>
+    <div className='footer' >
       <div className="box1">
         <div className="example">
             <h1>Unoia</h1>
