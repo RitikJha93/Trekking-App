@@ -2,17 +2,47 @@ import "./Navbar.css"
 import { useState,useEffect } from "react";
 import logo from '../../images/logo.png'
 
-import {Link,useLocation} from 'react-router-dom'
+import {Link,useLocation , useNavigate} from 'react-router-dom'
 export default function Navbar() {
 
   const [isNavExpanded, setIsNavExpanded] = useState(false)
   const [isDisplay, setIsDisplay] = useState(false)
 
-  const handleClick = ()=>{
-    setIsDisplay(!isDisplay)
-  }
+  // const handleClick = ()=>{
+  //   setIsDisplay(!isDisplay)
+  // }
 
-  let location = useLocation()
+  const [myStyle,setmyStyle] = useState({
+    display:"none"
+  })
+  let location = useLocation();
+  let navigate = useNavigate()
+
+  useEffect(() => {
+  }, [location]);
+
+  const handleLogout = ()=>{
+    localStorage.removeItem('token');
+    localStorage.removeItem('name');
+    localStorage.removeItem('email');
+    localStorage.removeItem('photo');
+    setmyStyle({
+      display:"none"
+    })
+    navigate('/login')
+  }
+  const handleUser = ()=>{
+    if(myStyle.display === 'none'){
+      setmyStyle({
+        display:"flex"
+      })
+    }
+    else{
+      setmyStyle({
+        display:"none"
+      })
+    }
+  }
   useEffect(()=>{
   },[location])
   return (
@@ -66,7 +96,18 @@ export default function Navbar() {
             <Link to="/team" className={location.pathname === '/team' ? 'click' : 'unclick'}>Team</Link>
           </li>
           <li>
-            <Link to="/login" className={location.pathname === '/team' ? 'click' : 'unclick'}>Login</Link>
+            {!localStorage.getItem('token')?
+            <Link to="/login" className={location.pathname === '/login' ? 'click' : 'unclick'}>Login</Link>
+            :
+            <div className="buttons">
+              <i class="fa-solid fa-user-large"  style={{fontSize:'20px',cursor:"pointer",color:"white"}} onClick={handleUser} ></i>
+              <div className='account' style={myStyle}>
+                  <Link className='list' to="/user" onClick={handleUser}><p>Profile</p></Link>
+                  <p onClick={handleLogout}>Logout</p>
+              </div>
+          </div>
+          
+            }
           </li>
         </ul>
       </div>

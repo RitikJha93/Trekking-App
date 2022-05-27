@@ -1,8 +1,20 @@
 import React from 'react'
 import './Info.css'
+import { useNavigate} from 'react-router-dom'
 import Calendar from '../Calendar/Calendar'
 import {Link} from 'react-router-dom'
 const Info = ({name,img,height,duration,desc,info,tpimg}) => {
+
+
+    const navigate = useNavigate()
+    const handleClick  = ()=>{
+        if(localStorage.getItem('token')){
+            navigate('/')
+        }
+        else{
+            navigate('/login')
+        }
+    }
   return (
     <div className='prod-info'>
         <div className="backgrnd-img">
@@ -69,7 +81,7 @@ const Info = ({name,img,height,duration,desc,info,tpimg}) => {
 
         <div className="calendar">
             <Calendar/>
-            <Link to='/pay'><button className='btn book-btn' id='book'>Book Now</button></Link>
+            <button className='btn book-btn' id='book' onClick={handleClick}>Book Now</button>
         </div>
         
 

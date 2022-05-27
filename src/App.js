@@ -11,8 +11,7 @@ import Blog from './Pages/Blog/Blog'
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Info from './components/Info/Info';
-import Pay from './components/Pay/Pay';
-import GoogleAuth from './Pages/GoogleAuth/GoogleAuth'
+import Profile from './components/Profile/Profile';
 import {
   BrowserRouter as Router,
   Route,
@@ -58,7 +57,8 @@ function App() {
           <Route exact path='/team' element={<Team/>} />
           <Route exact path='/login' element={<Login/>} />
           <Route exact path='/signup' element={<Signup/>} />
-          <Route exact path='/pay' element={<Pay/>} />
+          {/* <Route exact path='/pay' element={<Pay/>} /> */}
+          <Route exact path='/user' element={<Profile/>} />
           <Route exact path='/info'  element={<Info img={img} height={height} duration={duration} name={name} desc={desc} info={info} tpimg={tpimg}/>} />
         </Routes>
         <Footer/>

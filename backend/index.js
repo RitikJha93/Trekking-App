@@ -1,80 +1,24 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const Razorpay = require('razorpay');
-const dotenv = require('dotenv');
-const cors = require('cors')
-dotenv.config();
-const app = express();
+// require('dotenv').config({path : '/.env'})
+require('dotenv').config({path : require('find-config')('.env')})
 
-app.use(cors());
-mongoose.connect(process.env.MONGO_URL).then(() => {
-  console.log('mongodb connected');
-});
+// requiring database connection
+require("./db/db");
+var cors = require('cors')
+ 
+// connectToMongo();
+const app = express()
+const port = 5000;
 
-app.use(express.json({extended:false}));
+app.use(cors())
+app.use(express.json());
 
-const OrderSchema = mongoose.Schema({
-  isPaid: Boolean,
-  amount: Number,
-  razorpay: {
-    orderId: String,
-    paymentId: String,
-    signature: String,
-  },
-});
-const Order = mongoose.model('Order', OrderSchema);
+app.use("/api/auth", require("./routes/auth"));
 
-app.get('/get-razorpay-key', (req, res) => {
-  res.send({ key: process.env.RAZORPAY_KEY_ID });
-});
+app.get("/",(req,res)=>{
+    res.send("hello world");
+})
 
-app.post('/create-order', async (req, res) => {
-  try {
-    const instance = new Razorpay({
-      key_id: process.env.RAZORPAY_KEY,
-      key_secret: process.env.RAZORPAY,
-    });
-    const options = {
-      amount: req.body.amount,
-      currency: 'INR',
-    };
-    const order = await instance.orders.create(options);
-    if (!order) return res.status(500).send('Some error occured');
-    res.send(order);
-  } catch (error) {
-    res.status(500).send(error);
-  }
-});
-
-app.post('/pay-order', async (req, res) => {
-  try {
-    const { amount, razorpayPaymentId, razorpayOrderId, razorpaySignature } =
-      req.body;
-    const newOrder = Order({
-      isPaid: true,
-      amount: amount,
-      razorpay: {
-        orderId: razorpayOrderId,
-        paymentId: razorpayPaymentId,
-        signature: razorpaySignature,
-      },
-    });
-    await newOrder.save();
-    res.send({
-      msg: 'Payment was successfull',
-    });
-  } catch (error) {
-    console.log(error);
-    res.status(500).send(error);
-  }
-});
-
-app.get('/list-orders', async (req, res) => {
-  const orders = await Order.find();
-  res.send(orders);
-});
-
-
-app.listen(5000, () =>
-  console.log(`server started on http://localhost:5000`)
-);
+app.listen(port,()=>{
+    console.log("connected to port 5000");
+}) 
